@@ -1,3 +1,4 @@
+/********reset********/
 *,
 *:before,
 *:after {
@@ -106,7 +107,7 @@ input {
   border-radius: 0;
 }
 
-/********************/
+/*******總體設定*************/
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -115,7 +116,6 @@ body {
   margin: 0 auto;
   max-width: 1000px;
 }
-
 header {
   display: flex;
   justify-content: space-around;
@@ -222,80 +222,6 @@ header {
     }
   }
 }
-/*********
-.experience {
-  margin: 0 auto;
-  max-width: 1000px;
-  h2 {
-    text-align: center;
-    margin-top: 6rem;
-    font-size: 2rem;
-    color: blue;
-  }
-  .time {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .position {
-      font-weight: bold;
-      color: rgb(145, 39, 68);
-      font-size: 1.2rem;
-    }
-    .period {
-      font-weight: bold;
-    }
-    .leftitem {
-      position: relative;
-      border: 2px solid rgb(251, 86, 191);
-      border-radius: 1rem;
-      background-color: white;
-      margin: 5rem 2rem;
-      p {
-        padding: 0.8rem;
-        text-align: right;
-      }
-      img {
-        position: absolute;
-        top: 5rem;
-        right: -3rem;
-      }
-    }
-  }
-  .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .period {
-      font-weight: bold;
-    }
-    .position {
-      font-weight: bold;
-      color: rgb(145, 39, 68);
-      font-size: 1.2rem;
-    }
-    .rightitem {
-      position: relative;
-      border: 2px solid rgb(251, 86, 191);
-      border-radius: 1rem;
-      background-color: white;
-      margin: 5rem 2rem;
-      p {
-        padding: 0.8rem;
-      }
-      img {
-        position: absolute;
-        top: 5rem;
-        left: -3rem;
-      }
-    }
-  }
-}
-************/
 
 .experience {
   h2 {
