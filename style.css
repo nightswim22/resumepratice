@@ -110,15 +110,19 @@ input {
   border-radius: 0;
 }
 
+/*******模組化*************/
 /*******總體設定*************/
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: rgb(250, 250, 250);
+}
+
+.container {
   margin: 0 auto;
   max-width: 1000px;
 }
 
-header {
+.headercontanier {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -126,45 +130,42 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
-header .people {
-  display: flex;
-  flex-direction: column;
+  height: 60vh;
   align-items: center;
-  padding-top: 7rem;
 }
-header .people h1 {
+.headercontanier .people {
+  margin-top: 2rem;
+}
+.headercontanier .people h1 {
   font-size: 3rem;
   margin-top: 1rem;
 }
-header .people p {
+.headercontanier .people p {
   line-height: 1.5;
   margin-top: 1rem;
   font-size: 1.2rem;
 }
-header .info ul {
-  margin-top: 10rem;
-}
-header .info ul li {
+.headercontanier .info li {
   line-height: 2;
   font-size: 1.5rem;
   color: white;
 }
-header .info ul li img {
+.headercontanier .info li img {
   padding: 0rem 1rem;
   vertical-align: middle;
 }
 
 @media screen and (max-width: 560px) {
-  header {
+  .headercontanier {
+    height: 70vh;
     align-items: center;
   }
-  header .info ul {
+  .headercontanier .info ul {
     margin-top: 3rem;
     background-color: rgb(170, 167, 248);
     padding: 0.5rem;
   }
-  header .info ul li {
+  .headercontanier .info ul li {
     color: rgb(0, 0, 0);
     font-size: 1rem;
   }
@@ -186,14 +187,13 @@ header .info ul li img {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  flex-basis: 300px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin: 1rem;
   background-color: rgb(255, 255, 255);
-  width: 300px;
   border-radius: 0.5rem;
 }
 .skills .skillcard .card img {
-  width: 120px;
   padding-top: 2rem;
 }
 .skills .skillcard .card h3 {
@@ -219,120 +219,159 @@ header .info ul li img {
   border-bottom: 10px solid rgb(103, 98, 166);
 }
 
-.experience h2 {
+.experience {
+  position: relative;
+}
+
+h2 {
   text-align: center;
   margin-top: 6rem;
   font-size: 2rem;
   color: blue;
 }
-.experience .time {
+
+.time::before {
+  content: url(./images/dot-start.png);
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.time ul {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 4rem auto;
+  padding: 4rem 0rem;
+  position: relative;
 }
-.experience .time img {
-  position: absolute;
-  z-index: -1;
-}
-.experience .time .dot-start {
-  top: -10%;
-}
-.experience .time .dot1 {
-  top: 15%;
-}
-.experience .time .dot3 {
-  top: 80%;
-}
-.experience .time::before {
+.time ul::before {
   content: "";
-  width: 4px;
-  height: 120%;
-  background: rgb(216, 216, 216);
   position: absolute;
+  display: block;
+  width: 2px;
+  background-color: #888;
+  height: 100%;
   left: 50%;
-  top: -10%;
+  transform: translate(-50%, 0%);
   z-index: -1;
 }
-.experience .time::after {
+.time ul::after {
   content: "";
-  width: 6%;
-  height: 5px;
-  background: rgb(216, 216, 216);
   position: absolute;
-  left: 47%;
-  top: 110%;
+  width: 40px;
+  background-color: #888;
+  height: 1%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
   z-index: -1;
 }
-.experience .time .period {
-  font-weight: bold;
+.time ul .pc_flextopitem {
+  align-self: flex-end;
 }
-.experience .time .position {
+.time ul .pc_flextopitem::before {
+  content: url(./images/dot-timeItem.png);
+  display: block;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.time ul .pc_flexmiditem {
+  align-self: flex-start;
+  text-align: right;
+}
+.time ul .pc_flexmiditem::before {
+  content: url(./images/dot-timeItem.png);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.time ul .pc_flexenditem {
+  align-self: flex-end;
+}
+.time ul .pc_flexenditem::before {
+  content: url(./images/dot-timeItem.png);
+  display: block;
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.time ul li {
+  margin: 1rem;
+}
+.time .period {
+  font-weight: bold;
+  display: block;
+  padding: 0.8rem;
+}
+.time .position {
   font-weight: bold;
   color: rgb(145, 39, 68);
   font-size: 1.2rem;
 }
-.experience .time .item {
+.time .item {
   border: 2px solid rgb(251, 86, 191);
   border-radius: 1rem;
   background-color: white;
 }
-.experience .time .item img {
-  position: absolute;
-}
-.experience .time .item p {
+.time .item p {
   padding: 0.8rem;
 }
-.experience .time .leftitem {
-  align-self: flex-start;
-  text-align: right;
-}
-.experience .time .rightitem {
-  align-self: flex-end;
-}
 
-@media screen and (max-width: 800px) {
-  .experience .time .leftitem {
-    align-self: center;
-    text-align: left;
-    margin-top: 1rem;
-  }
-  .experience .time .rightitem {
-    align-self: center;
-    margin-top: 1rem;
-  }
-  .experience .time img {
-    left: 8%;
-  }
+@media screen and (max-width: 850px) {
   .experience .time::before {
     left: 10%;
   }
-  .experience .time::after {
-    left: 7%;
+  .experience .time ul::before {
+    left: 10%;
+    transform: translate(-50%, 0%);
+  }
+  .experience .time ul::after {
+    left: 10%;
+    transform: translate(-50%, 0%);
+  }
+  .experience .time .pc_flextopitem,
+.experience .time .pc_flexmiditem {
+    align-self: center;
+    text-align: left;
+    margin-top: 1rem;
+  }
+  .experience .time .pc_flextopitem::before,
+.experience .time .pc_flexmiditem::before {
+    left: 10%;
+  }
+  .experience .time .pc_flexenditem {
+    align-self: center;
+    margin-top: 1rem;
+  }
+  .experience .time .pc_flexenditem::before {
+    left: 10%;
   }
 }
 @media screen and (max-width: 560px) {
-  .experience .time .leftitem {
-    align-self: center;
-    text-align: left;
-    margin: 0 1rem;
-    margin-top: 1rem;
-  }
-  .experience .time .rightitem {
-    align-self: center;
-    margin: 0 1rem;
-    margin-top: 1rem;
-  }
-  .experience .time img {
-    display: none;
-  }
   .experience .time::before {
     display: none;
   }
-  .experience .time::after {
+  .experience .time ul::before {
+    display: none;
+  }
+  .experience .time ul::after {
+    display: none;
+  }
+  .experience .time .pc_flextopitem::before,
+.experience .time .pc_flexmiditem::before {
+    display: none;
+  }
+  .experience .time .pc_flexenditem::before {
     display: none;
   }
 }
@@ -345,14 +384,12 @@ header .info ul li img {
 .work .workdesign {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 1000px;
   margin-top: 2rem;
 }
 .work a {
   margin: 0 auto;
-  width: 300px;
   text-decoration: none;
+  flex-basis: 300px;
 }
 .work a .workitem {
   background-color: rgb(66, 66, 66);
@@ -378,14 +415,15 @@ header .info ul li img {
 }
 .work a img {
   padding: 3rem;
-  width: 150x;
+  width: 70%;
+  max-width: 300px;
   align-self: center;
 }
 .work a .pink {
   background-color: rgb(253, 180, 227);
 }
 .work a .pink img {
-  padding: 2rem;
+  width: 100%;
 }
 .work a .black {
   background-color: rgb(66, 66, 66);
@@ -396,7 +434,6 @@ header .info ul li img {
 .work a:hover {
   scale: 1.05;
   transition: 1s;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 3px;
 }
 
 .about h2 {
@@ -413,10 +450,11 @@ header .info ul li img {
   justify-content: center;
 }
 .about .about_content img {
-  width: 250px;
+  width: 50%;
+  max-width: 250px;
 }
 .about .about_content p {
-  width: 500px;
+  max-width: 500px;
   font-size: 1.2rem;
   color: rgb(108, 108, 108);
   margin: 2rem;
@@ -428,9 +466,6 @@ header .info ul li img {
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
-  min-height: 10vh;
   margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem 0rem;
 }/*# sourceMappingURL=style.css.map */
