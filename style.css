@@ -130,7 +130,6 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 60vw;
   align-items: center;
 }
 .headercontanier .people {
@@ -157,7 +156,6 @@ body {
 
 @media screen and (max-width: 560px) {
   .headercontanier {
-    height: 70vh;
     align-items: center;
   }
   .headercontanier .info ul {
