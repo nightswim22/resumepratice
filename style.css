@@ -130,7 +130,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 60vh;
+  height: 60vw;
   align-items: center;
 }
 .headercontanier .people {
@@ -389,7 +389,6 @@ h2 {
 .work a {
   margin: 0 auto;
   text-decoration: none;
-  flex-basis: 300px;
 }
 .work a .workitem {
   background-color: rgb(66, 66, 66);
@@ -414,16 +413,15 @@ h2 {
   padding: 1rem;
 }
 .work a img {
-  padding: 3rem;
-  width: 70%;
-  max-width: 300px;
+  padding: 3rem 0rem;
   align-self: center;
+  width: 50%;
 }
 .work a .pink {
   background-color: rgb(253, 180, 227);
 }
 .work a .pink img {
-  width: 100%;
+  width: 90%;
 }
 .work a .black {
   background-color: rgb(66, 66, 66);
