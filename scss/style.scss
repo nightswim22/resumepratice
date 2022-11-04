@@ -107,8 +107,6 @@ input {
   border-radius: 0;
 }
 
-/*******模組化*************/
-
 /*******總體設定*************/
 
 body {
@@ -124,9 +122,9 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-image: url(./images/img-headerShape.png);
+  background-image: url(../images/img-headerShape.png);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: bottom;
   background-size: cover;
   align-items: center;
   .people {
@@ -233,7 +231,7 @@ h2 {
 }
 .time {
   &::before {
-    content: url(./images/dot-start.png);
+    content: url(../images/dot-start.png);
     display: block;
     position: absolute;
     left: 50%;
@@ -272,7 +270,7 @@ h2 {
     .pc_flextopitem {
       align-self: flex-end;
       &::before {
-        content: url(./images/dot-timeItem.png);
+        content: url(../images/dot-timeItem.png);
         display: block;
         position: absolute;
         top: 23%;
@@ -285,7 +283,7 @@ h2 {
       align-self: flex-start;
       text-align: right;
       &::before {
-        content: url(./images/dot-timeItem.png);
+        content: url(../images/dot-timeItem.png);
         display: block;
         position: absolute;
         top: 50%;
@@ -297,7 +295,7 @@ h2 {
     .pc_flexenditem {
       align-self: flex-end;
       &::before {
-        content: url(./images/dot-timeItem.png);
+        content: url(../images/dot-timeItem.png);
         display: block;
         position: absolute;
         top: 79%;
@@ -484,7 +482,7 @@ h2 {
   }
 }
 .footerpart {
-  background-image: url(./images/img-Looper-bg.png);
+  background-image: url(../images/img-Looper-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
