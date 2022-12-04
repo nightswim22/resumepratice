@@ -415,7 +415,11 @@ h2 {
       border-radius: 0.5rem;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       margin-top: 2rem;
+      transition: 0.8s;
+      &:hover {
+        transform: scale(1.05);
 
+      }
       .work_content {
         background-color: white;
         h3 {
@@ -430,6 +434,7 @@ h2 {
           padding: 1rem;
         }
       }
+
     }
     img {
       padding: 3rem 0rem;
@@ -448,10 +453,7 @@ h2 {
     .blue {
       background-color: rgb(138, 215, 250);
     }
-    &:hover {
-      scale: 1.05;
-      transition: 1s;
-    }
+
   }
 }
 
