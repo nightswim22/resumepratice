@@ -144,10 +144,10 @@ body {
       line-height: 2;
       font-size: 1.5rem;
       color: white;
-      img {
-        padding: 0rem 1rem;
-        vertical-align: middle;
-      }
+    }
+    img {
+      padding: 0rem 1rem;
+      vertical-align: middle;
     }
   }
 }
@@ -159,12 +159,12 @@ body {
         margin-top: 3rem;
         background-color: rgb(170, 167, 248);
         padding: 0.5rem;
-        li {
-          color: rgb(0, 0, 0);
-          font-size: 1rem;
-        }
-      }
     }
+       li {
+      color: rgb(0, 0, 0);
+      font-size: 1rem;
+       }
+  }
   }
 }
 
@@ -190,22 +190,23 @@ body {
       margin: 1rem;
       background-color: rgb(255, 255, 255);
       border-radius: 0.5rem;
-      img {
-        padding-top: 2rem;
-      }
-      h3 {
-        font-size: 1.5rem;
-        padding-top: 2rem;
-      }
-      ul {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        li {
-          list-style-type: disc;
-          margin: 0 3rem;
-          line-height: 1.5;
-        }
-      }
+    }
+    img {
+      padding-top: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      padding-top: 2rem;
+    }
+    ul {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      
+    }
+    li {
+      list-style-type: disc;
+      margin: 0 3rem;
+      line-height: 1.5;
     }
     .weblayout {
       border-bottom: 10px solid rgb(245, 141, 35);
@@ -420,21 +421,21 @@ h2 {
         transform: scale(1.05);
 
       }
-      .work_content {
-        background-color: white;
-        h3 {
-          color: black;
-          font-size: 1.2rem;
-          font-weight: bold;
-          padding: 0 1rem;
-          padding-top: 1rem;
-        }
-        p {
-          color: rgb(108, 108, 108);
-          padding: 1rem;
-        }
-      }
 
+    }
+    .work_content {
+      background-color: white;
+    }
+    h3 {
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0 1rem;
+      padding-top: 1rem;
+    }
+    p {
+      color: rgb(108, 108, 108);
+      padding: 1rem;
     }
     img {
       padding: 3rem 0rem;

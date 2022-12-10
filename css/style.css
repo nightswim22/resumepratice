@@ -148,7 +148,7 @@ body {
   font-size: 1.5rem;
   color: white;
 }
-.headercontanier .info li img {
+.headercontanier .info img {
   padding: 0rem 1rem;
   vertical-align: middle;
 }
@@ -162,7 +162,7 @@ body {
     background-color: rgb(170, 167, 248);
     padding: 0.5rem;
   }
-  .headercontanier .info ul li {
+  .headercontanier .info li {
     color: rgb(0, 0, 0);
     font-size: 1rem;
   }
@@ -190,18 +190,18 @@ body {
   background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
 }
-.skills .skillcard .card img {
+.skills .skillcard img {
   padding-top: 2rem;
 }
-.skills .skillcard .card h3 {
+.skills .skillcard h3 {
   font-size: 1.5rem;
   padding-top: 2rem;
 }
-.skills .skillcard .card ul {
+.skills .skillcard ul {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.skills .skillcard .card ul li {
+.skills .skillcard li {
   list-style-type: disc;
   margin: 0 3rem;
   line-height: 1.5;
@@ -399,17 +399,17 @@ h2 {
 .work a .workitem:hover {
   transform: scale(1.05);
 }
-.work a .workitem .work_content {
+.work a .work_content {
   background-color: white;
 }
-.work a .workitem .work_content h3 {
+.work a h3 {
   color: black;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0 1rem;
   padding-top: 1rem;
 }
-.work a .workitem .work_content p {
+.work a p {
   color: rgb(108, 108, 108);
   padding: 1rem;
 }
